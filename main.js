@@ -22,6 +22,10 @@ const firebaseConfig = {
   appId: "1:579109661574:web:4a7cd4060f70eded945a07"
 };
 
+//inisialisasi firebase
+const aplikasi = initializeApp(firebaseConfig)
+const basisdata = getFirestore(aplikasi)
+
 // fungsi ambil daftar pelanggan
 export async function ambilDaftarPelanggan() {
   const refDokumen = collection(basisdata, "pelanggan");
