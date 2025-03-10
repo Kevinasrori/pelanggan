@@ -46,14 +46,14 @@ export async function ambilDaftarPelanggan() {
 
 
 export async function hapuspelanggan(id) {
-  await deleteDoc(doc(basisdata, "barang", id))
+  await deleteDoc(doc(basisdata, "pelanggan", id))
 }
 
 
 export async function tambahPelanggan(nama, alamat, notelpon) {
   try {
     // menyimpan data ke firebase
-    const refDokumen = await addDoc(collection(basisdata, "Pelanggan"), {
+    const refDokumen = await addDoc(collection(basisdata, "pelanggan"), {
       nama: nama,
       alamat: alamat,
       notelpon: notelpon
